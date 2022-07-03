@@ -1,0 +1,12 @@
+name: create a comment on new issues
+on:
+  issues:
+    types: [opened]
+    
+jobs:
+  comment-with-action:
+    run-on: ubuntu-lasted
+    steps:
+      - name: "dump github context"
+        run: echo'${{ toJSON(github.event)}}' | jq
+        shell:bash
