@@ -3,10 +3,10 @@ name: Hello world workflow
 on:
   push:
     branches:
-      -main
+      -master
   pull_request:
     branches:
-      -main
+      -master
   workflow_dispatch
 
 jobs:
@@ -17,11 +17,11 @@ jobs:
       - name hello world
         run: echo "Hello world"
         shell:bash
-  goodbye
+  goodbye:
     runs-on: ubuntu-lasted
     steps:
       - name: goodbyt world
-      run: echo "Goodbye World "
-      shell:bash
-      
+        run: echo "Goodbye World "
+        shell:bash
+
 
